@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+User.new(name: "user_1").save!
+User.new(name: "user_2").save!
+User.new(name: "user_3").save!
+User.new(name: "user_4").save!
+User.new(name: "user_5").save!
