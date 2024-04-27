@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: ./docker/Dockerfile
+      args:
+        - USERNAME=${USERNAME}
+        - GROUPNAME=${GROUPNAME}
+        - UID=${UID}
+        - GID=${GID}
+    # command: /bin/sh -c "rm -f tmp/pids/server.pid && bin/setup && bin/dev"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/workspace
+    user: "${UID}:${GID}"
+    tty: true
