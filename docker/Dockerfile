@@ -9,6 +9,7 @@ RUN apt-get update -qq \
     && apt-get -y install --no-install-recommends make build-essential git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+RUN chown -R $USERNAME:$GROUPNAME /usr/local
 WORKDIR /workspace
 COPY Gemfile /workspace/Gemfile
 COPY Gemfile.lock /workspace/Gemfile.lock
