@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'tailwind', 'inter-font', "data-turbo-track": 'reload' %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', "data-turbo-track": 'reload' %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <div class="container mx-auto flex flex-col">
-      <%= render("header") %>
+      <%= render('header') %>
       <main class="flex flex-row">
-        <%= render("sidenav") %>
+        <%= render('sidenav') %>
         <%= yield %>
       </main>
     </div>
